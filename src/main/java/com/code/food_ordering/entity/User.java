@@ -14,6 +14,7 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "_users")
 public class User {
 
     @Id
@@ -26,6 +27,7 @@ public class User {
 
     private String password;
 
+    @Enumerated(EnumType.STRING)
     private ROLE role;
 
     @JsonIgnore

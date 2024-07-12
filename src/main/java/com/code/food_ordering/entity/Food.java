@@ -20,6 +20,7 @@ public class Food {
     private Long id;
 
     private String name;
+
     private String description;
 
     private double price;
@@ -33,6 +34,7 @@ public class Food {
 
     private boolean available;
 
+    @ManyToOne
     private Restaurant restaurant;
 
     private boolean isVegetarian;

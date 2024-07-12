@@ -1,5 +1,6 @@
 package com.code.food_ordering.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -49,8 +50,9 @@ public class Restaurant {
 
     private boolean open;
 
-
-
+    @JsonIgnore
+    @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Food> foods = new ArrayList<>();
 
 
 }
