@@ -28,7 +28,7 @@ public class User {
     private String password;
 
     @Enumerated(EnumType.STRING)
-    private ROLE role;
+    private ROLE role = ROLE.CUSTOMER;
 
     @JsonIgnore
     @OneToMany(mappedBy = "customer", cascade =CascadeType.ALL,  orphanRemoval = true)
