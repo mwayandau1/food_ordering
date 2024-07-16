@@ -1,6 +1,7 @@
 package com.code.food_ordering.entity;
 
 
+import com.code.food_ordering.dto.RestaurantDto;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
@@ -37,7 +38,7 @@ public class User {
     private List<Order> orders = new ArrayList<>();
 
     @ElementCollection
-    private List<Restaurant> favorites = new ArrayList<>();
+    private List<RestaurantDto> favorites = new ArrayList<>();
 
     @OneToMany(cascade = CascadeType.ALL,  orphanRemoval = true)
     private List<Address> addresses = new ArrayList<>();
