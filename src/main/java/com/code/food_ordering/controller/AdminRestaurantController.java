@@ -23,4 +23,10 @@ public class AdminRestaurantController {
     ResponseEntity<Restaurant> createRestaurant(@RequestBody RestaurantRequestDto req, @RequestHeader("Authorization") String jwt){
         return null;
     }
+
+
+    @GetMapping("/restaurants")
+    ResponseEntity<Restaurant> getAllRestaurants(){
+        return null;
+    }
 }
